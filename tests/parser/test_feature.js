@@ -20,6 +20,7 @@ describe('Cucumber json parser', function () {
         assert.deepEqual(feature.getURI(), 'features/embed.feature');
         assert.deepEqual(feature.getKeyword(), 'Feature');
         assert.deepEqual(feature.getDescription(), '');
+        assert.deepEqual(feature.getLine(), 1);
         assert.deepEqual(feature.getScenarios().length, 1);
     });
 });
