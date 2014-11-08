@@ -22,6 +22,20 @@ describe('Feature parser tests', function () {
         assert.deepEqual(feature.getLine(), 1);
         assert.deepEqual(feature.getScenarios().length, 1);
     });
+
+    it('should have a valid scenario content', function () {
+        var json = parseJson(data.feature),
+            feature = json.getFeatures()[0],
+            scenarios = feature.getScenarios(),
+            scenario = scenarios[0];
+
+        assert.deepEqual(feature.getScenarios().length, 1);
+        assert.deepEqual(scenario.getId(), 0);
+        assert.deepEqual(scenario.getName(), '');
+        assert.deepEqual(scenario.getKeyword(), '');
+        assert.deepEqual(scenario.getDescription(), '');
+        assert.deepEqual(scenario.getLine(), 0);
+    });
 });
 
 function parseJson(json_content) {

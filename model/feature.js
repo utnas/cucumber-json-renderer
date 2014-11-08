@@ -16,7 +16,9 @@ module.exports = function Feature(item) {
         var scenario,
             result = [];
         for (scenario in scenarios) {
-            result.push(new Scenario(scenario));
+            if (scenarios.hasOwnProperty(scenario)) {
+                result.push(new Scenario(scenario));
+            }
         }
         return result;
     };

@@ -9,7 +9,7 @@ module.exports = function Scenario(scenario) {
         line = scenario.line || 0,
         steps = scenario.steps || [];
 
-    this.getID = function () {
+    this.getId = function () {
         return id;
     };
 
