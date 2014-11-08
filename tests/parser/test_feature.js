@@ -12,7 +12,7 @@ describe('Cucumber json parser', function () {
     });
 
     it('should a valid content', function () {
-        var json = parseJson(),
+        var json = parseJson(data.feature),
             feature = json.getFeatures()[0];
 
         assert.deepEqual(feature.getId(), 'a-screenshot-feature');
