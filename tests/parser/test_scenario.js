@@ -5,6 +5,7 @@ var Scenario = require('../../model/scenario'),
 'use strict';
 
 describe('Scenario parser tests', function () {
+
     it('should return the content of scenario', function () {
         var scenario = new Scenario(JSON.parse(data.scenario)[0]);
 

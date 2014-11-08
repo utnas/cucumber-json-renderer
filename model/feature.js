@@ -1,5 +1,7 @@
-var EMPTY = require('../helpers/helpers').EMPTY_STRING;
 'use strict';
+var EMPTY = require('../helpers/helpers').EMPTY_STRING,
+    Scenario = require('./scenario');
+
 
 module.exports = function Feature(item) {
     var scenarios = item.elements || [],
@@ -11,8 +13,14 @@ module.exports = function Feature(item) {
         line = item.line || 0;
 
     this.getScenarios = function () {
-        return scenarios;
+        var scenario,
+            result = [];
+        for (scenario in scenarios) {
+            result.push(new Scenario(scenario));
+        }
+        return result;
     };
+
     this.getURI = function () {
         return uri;
     };

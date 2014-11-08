@@ -11,10 +11,9 @@ describe('Feature parser tests', function () {
         assert.equal(cucumberParser.getFeatures().length, 2)
     });
 
-    it('should a valid content', function () {
+    it('should have a valid feature content', function () {
         var json = parseJson(data.feature),
             feature = json.getFeatures()[0];
-
         assert.deepEqual(feature.getId(), 'a-screenshot-feature');
         assert.deepEqual(feature.getName(), 'A screenshot feature');
         assert.deepEqual(feature.getURI(), 'features/embed.feature');
