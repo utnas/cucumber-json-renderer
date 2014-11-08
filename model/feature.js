@@ -1,4 +1,5 @@
 var EMPTY = require('../helpers/helpers').EMPTY_STRING;
+'use strict';
 
 module.exports = function Feature(item) {
     var scenarios = item.elements || [],
