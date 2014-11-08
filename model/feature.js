@@ -1,4 +1,4 @@
-var EMPTY_STRING = String.empty;
+var EMPTY_STRING = '';
 
 module.exports = function Feature(item) {
     var scenarios = item.elements || [],
