@@ -8,6 +8,7 @@ describe('Scenario parser tests', function () {
 
     it('should return the content of scenario', function () {
         var scenario = new Scenario(JSON.parse(data.scenario)[0]);
+
         assert.deepEqual(scenario.getId(), 'a-screenshot-feature;');
         assert.deepEqual(scenario.getName(), '');
         assert.deepEqual(scenario.getType(), 0);
