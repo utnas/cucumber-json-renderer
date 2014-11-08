@@ -3,7 +3,7 @@ var assert = require('assert'),
     data = require('./data');
 
 
-describe('Cucumber json parser', function () {
+describe('Feature parser tests', function () {
 
     it('should contains 2 features', function () {
         var cucumberParser = new Parser();
