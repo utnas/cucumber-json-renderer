@@ -8,8 +8,7 @@ describe('Feature parser tests', function () {
     it('should contains 2 features', function () {
         var cucumberParser = new Parser();
         cucumberParser.parse(data.features);
-
-        assert.equal(cucumberParser.getFeatures().length, 2)
+        assert.deepEqual(cucumberParser.getFeatures().length, 2)
     });
 
     it('should have a valid feature content', function () {

@@ -4,13 +4,17 @@ module.exports = function Parser() {
     var features = [];
 
     this.parse = function (content) {
-        var values = JSON.parse(content);
-
-        values.forEach(function (item) {
-            if (values.hasOwnProperty(item)) {
-                features.push(new Feature(item));
+        var values = {};
+        try {
+            if (content) {
+                values = JSON.parse(content);
+                values.forEach(function (item) {
+                    features.push(new Feature(item));
+                });
             }
-        });
+        } catch (err) {
+            throw err;
+        }
     };
 
     this.getFeatures = function () {
