@@ -5,6 +5,14 @@ var assert = require('assert'),
 
 describe('Feature parser tests', function () {
 
+    it('should return an empty content for a empty json input data', function () {
+        var parser = new Parser();
+        parser.parse('[]');
+        assert.deepEqual(parser.getFeatures(), []);
+        parser.parse('');
+        assert.deepEqual(parser.getFeatures(), []);
+    });
+
     it('should contains 2 features', function () {
         var cucumberParser = new Parser();
         cucumberParser.parse(data.features);
