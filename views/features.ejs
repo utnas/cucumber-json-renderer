@@ -1,2 +1,8 @@
 <h1>Features</h1>
-<%= features %>
+<hr>
+<% features.forEach(function(feature){ %>
+Id: <%= feature.getId() %>
+<br/>
+Name: <%= feature.getName() %>
+<hr>
+<% }) %>

@@ -4,9 +4,9 @@ var express = require('express'),
     logger = require('morgan'),
     cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser'),
-    routes = require('./routes/index'),
-    users = require('./routes/users'),
-    features = require('./routes/features'),
+    routes = require('./routes/index_route'),
+    users = require('./routes/users_route'),
+    features = require('./routes/features_route'),
     app = express();
 
 // view engine setup
