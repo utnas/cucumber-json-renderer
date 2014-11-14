@@ -1,13 +1,17 @@
-var express = require('express'),
-    data = require('../tests/parser/data'),
-    Parser = require('../model/parser'),
-    router = express.Router();
+(function () {
+    'user strict';
 
-router.get('/', function (req, res) {
-    var parser = new Parser();
-    parser.parse(data.features);
+    var express = require('express'),
+        data = require('../tests/parser/data'),
+        Parser = require('../model/parser'),
+        router = express.Router();
 
-    res.render('features', {features: parser.getFeatures()});
-});
+    router.get('/', function (req, res) {
+        var parser = new Parser();
+        parser.parse(data.features);
 
-module.exports = router;
+        res.render('features', {features: parser.getFeatures()});
+    });
+
+    module.exports = router;
+}());

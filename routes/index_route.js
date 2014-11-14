@@ -1,8 +1,12 @@
-var express = require('express'),
-    router = express.Router();
+(function () {
+    'user strict';
 
-router.get('/', function (req, res) {
-    res.render('index', { title: 'Express' });
-});
+    var express = require('express'),
+        router = express.Router();
 
-module.exports = router;
+    router.get('/', function (req, res) {
+        res.render('index', {title: 'Cucumber json html renderer'});
+    });
+
+    module.exports = router;
+}());

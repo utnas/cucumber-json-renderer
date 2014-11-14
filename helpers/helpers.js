@@ -1,3 +1,7 @@
-module.exports = {
-    EMPTY_STRING: ''
-};
+(function () {
+    'user strict';
+
+    module.exports = {
+        EMPTY_STRING: ''
+    };
+}());

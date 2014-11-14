@@ -1,3 +1,7 @@
-module.exports = function Base() {
+(function () {
+    'user strict';
 
-};
+    module.exports = function Base() {
+
+    };
+}());

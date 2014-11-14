@@ -1,8 +1,12 @@
-var express = require('express'),
-    router = express.Router();
+(function () {
+    'user strict';
 
-router.get('/', function (req, res) {
-    res.send('respond with a resource');
-});
+    var express = require('express'),
+        router = express.Router();
 
-module.exports = router;
+    router.get('/', function (req, res) {
+        res.send('respond with a resource');
+    });
+
+    module.exports = router;
+}());

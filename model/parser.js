@@ -1,23 +1,30 @@
-var Feature = require('./feature');
+(function () {
+    'user strict';
 
-module.exports = function Parser() {
-    var features = [];
+    var Feature = require('./feature');
 
-    this.parse = function (content) {
-        var values = {};
-        try {
-            if (content) {
-                values = JSON.parse(content);
-                values.forEach(function (item) {
-                    features.push(new Feature(item));
-                });
+    module.exports = function Parser() {
+        var features = [];
+
+        this.parse = function (content) {
+            var values = {};
+            try {
+                if (content) {
+                    values = JSON.parse(content);
+                    values.forEach(function (item) {
+                        features.push(new Feature(item));
+                    });
+                }
+            } catch (err) {
+                throw {
+                    name: 'Unable to read json content',
+                    message: 'The content provided was corrupted.'
+                };
             }
-        } catch (err) {
-            throw err;
+        };
+
+        this.getFeatures = function () {
+            return features;
         }
     };
-
-    this.getFeatures = function () {
-        return features;
-    }
-};
+}());
