@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cucumber JSON Html renderer</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png"/>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
 <h1>Features</h1>
 <hr>
 <% features.forEach(function(feature){ %>
@@ -16,3 +24,6 @@ Passed scenarios: <%= feature.getSuccess().length %>
 Failed Scenarios: <%= feature.getFailures().length %>
 <hr>
 <% }) %>
+
+</body>
+</html>
