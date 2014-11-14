@@ -53,6 +53,12 @@
                 feature = json.getFeatures()[0];
             assert.deepEqual(feature.getSuccess().length, 1);
         });
+
+        it('should retrieves statics from feature', function () {
+            var json = parseJson(data.feature),
+                feature = json.getFeatures()[0];
+            assert.deepEqual(feature.getStatistics(), {'passed': 'Passed: 100 %', 'failures': 'Failed: 0 %'});
+        });
     });
 
     function parseJson(json_content) {

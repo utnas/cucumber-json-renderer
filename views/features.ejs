@@ -1,12 +1,18 @@
 <h1>Features</h1>
 <hr>
 <% features.forEach(function(feature){ %>
-Id: <%= feature.getId() %>
-<br/>
 Name: <%= feature.getName() %>
 <br/>
 Number of scenarios: <%= feature.getScenarios().length %>
 <br/>
-Success scenarios: <%= feature.getSuccess()%>
+Statatistics:
+<ul>
+    <li><%= feature.getStatistics().passed %></li>
+    <li><%= feature.getStatistics().failures %></li>
+</ul>
+<br/>
+Passed scenarios: <%= feature.getSuccess().length %>
+<br>
+Failed Scenarios: <%= feature.getFailures().length %>
 <hr>
 <% }) %>

@@ -32,7 +32,8 @@
             uri = item.uri || EMPTY,
             keyword = item.keyword || EMPTY,
             description = item.description || EMPTY,
-            line = item.line || 0;
+            line = item.line || 0,
+            that = this;
 
         // public
         this.getScenarios = function () {
@@ -70,5 +71,16 @@
         this.getFailures = function () {
             return filterScenarios();
         };
+
+        this.getStatistics = function () {
+            var totalScenarios = that.getScenarios().length || 1;
+            return {
+                passed: 'Passed: ' + (that.getSuccess().length / totalScenarios) * 100 + ' %',
+                failures: 'Failed: ' + (that.getFailures().length / totalScenarios) * 100 + ' %'
+            };
+        };
     };
-}());
+}
+()
+)
+;
