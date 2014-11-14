@@ -24,7 +24,6 @@
         it('should have a valid feature content', function () {
             var json = parseJson(data.feature),
                 feature = json.getFeatures()[0];
-
             assert.deepEqual(feature.getId(), 'a-screenshot-feature');
             assert.deepEqual(feature.getName(), 'A screenshot feature');
             assert.deepEqual(feature.getURI(), 'features/embed.feature');
@@ -39,7 +38,6 @@
                 feature = json.getFeatures()[0],
                 scenarios = feature.getScenarios(),
                 scenario = scenarios[0];
-
             assert.deepEqual(scenarios.length, 1);
             assert.deepEqual(scenario.getId(), 'a-screenshot-feature;');
             assert.deepEqual(scenario.getName(), '');
@@ -54,7 +52,7 @@
             assert.deepEqual(feature.getSuccess().length, 1);
         });
 
-        it('should retrieves statics from feature', function () {
+        it('should retrieves statistics from feature in term of success and failures', function () {
             var json = parseJson(data.feature),
                 feature = json.getFeatures()[0];
             assert.deepEqual(feature.getStatistics(), {'passed': 'Passed: 100 %', 'failures': 'Failed: 0 %'});
