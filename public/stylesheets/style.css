@@ -1,8 +1,9 @@
 body {
-  padding: 15px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    padding: 15px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #1c22ff;
+.piechart {
+    width: auto;
+    height: 300px;
 }

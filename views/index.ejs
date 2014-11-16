@@ -1,17 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <title><%= title %></title>
     <link rel="icon" type="image/png" href="/images/favicon.png"/>
     <link rel='stylesheet' href='/stylesheets/style.css'/>
     <link rel='stylesheet' href='/stylesheets/bootstrap.min.css'/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load("visualization", "1", {packages: ["corechart"]});
+        google.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                        ['Scenario', 'Status'],
+                        ['Passed', 11],
+                        ['Failed', 2],
+                        ['Pending', 2],
+                        ['Skipped', 7]
+                    ]),
+                    options = {},
+                    chart1 = new google.visualization.PieChart(document.getElementById('piechart1'));
+            chart2 = new google.visualization.PieChart(document.getElementById('piechart2'));
+
+            chart1.draw(data, options);
+            chart2.draw(data, options);
+        }
+    </script>
+
 </head>
 <body>
-<h1><%= title %></h1>
 
-<p>Welcome to <%= title %></p>
+<div class="page-header">
+    <h1><img alt="Brand" src="/images/favicon.png">
+        <%= title %>
+        <small>HTML pretty renderer</small>
+    </h1>
+</div>
 
-<a href="/features" class="btn btn-default">View Features</a>
+<a href="/features" class="btn btn-info btn-lg">Details by Feature</a>
+
+<div class="row">
+    <div class="col-sm-3 col-lg-5 text-default">
+        <h3>Scenarios status of execution</h3>
+
+        <div class="piechart" id="piechart1"></div>
+    </div>
+    <div class="col-sm-6  text-default">
+
+        <h3>Steps status of execution</h3>
+
+        <div class="piechart" id="piechart2"></div>
+    </div>
+</div>
+<hr>
 
 </body>
 </html>

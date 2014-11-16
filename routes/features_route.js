@@ -2,15 +2,11 @@
     'user strict';
 
     var express = require('express'),
-        data = require('../tests/parser/data'),
-        Parser = require('../model/parser'),
+        parser = require('../model/json_loader').getParser(),
         router = express.Router();
 
     router.get('/', function (req, res) {
-        var parser = new Parser();
-        parser.parse(data.features);
-
-        res.render('features', {features: parser.getFeatures()});
+        res.render('features', {title: 'Cucumber.json renderer', features: parser.getFeatures()});
     });
 
     module.exports = router;

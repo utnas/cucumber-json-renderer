@@ -1,29 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Cucumber JSON Html renderer</title>
     <link rel="icon" type="image/png" href="/images/favicon.png"/>
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css'/>
     <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 <body>
+
+<div class="page-header">
+    <h1><img alt="Brand" src="/images/favicon.png">
+        <%= title %>
+        <small>HTML pretty custom renderer</small>
+    </h1>
+</div>
 <h1>Features</h1>
-<hr>
+<br>
 <% features.forEach(function(feature){ %>
 Name: <%= feature.getName() %>
 <br/>
 Number of scenarios: <%= feature.getScenarios().length %>
 <br/>
-Statatistics:
+Statistics:
 <ul>
     <li><%= feature.getStatistics().passed %></li>
     <li><%= feature.getStatistics().failures %></li>
 </ul>
-<br/>
 Passed scenarios: <%= feature.getSuccess().length %>
 <br>
-Failed Scenarios: <%= feature.getFailures().length %>
+Failed scenarios: <%= feature.getFailures().length %>
 <hr>
 <% }) %>
-
 </body>
 </html>

@@ -25,6 +25,6 @@
 
         this.getFeatures = function () {
             return features;
-        }
+        };
     };
 }());
