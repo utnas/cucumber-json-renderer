@@ -2,7 +2,7 @@
     'use strict';
 
     var data = require('../tests/parser/data'),
-        Parser = require('./parser.js');
+        Parser = require('./parser');
 
     function Loader() {
         var parser = new Parser();
