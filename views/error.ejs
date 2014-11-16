@@ -1,7 +1,9 @@
 <% if(error.status === 404){ %>
 <img class="img-responsive center-block" src="./images/404.png"/>
 <% }else{ %>
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+<div class="alert-danger">
+    <h1><%= message %></h1>
+
+    <h2><%= error.status %></h2>
+</div>
 <% } %>
