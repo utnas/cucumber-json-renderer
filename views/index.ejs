@@ -7,27 +7,6 @@
     <link rel='stylesheet' href='/stylesheets/bootstrap.min.css'/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-        google.load("visualization", "1", {packages: ["corechart"]});
-        google.setOnLoadCallback(drawChart);
-        function drawChart() {
-            var data = google.visualization.arrayToDataTable([
-                        ['Scenario', 'Status'],
-                        ['Passed', 11],
-                        ['Failed', 2],
-                        ['Pending', 2],
-                        ['Skipped', 7]
-                    ]),
-                    options = {},
-                    chart1 = new google.visualization.PieChart(document.getElementById('piechart1'));
-            chart2 = new google.visualization.PieChart(document.getElementById('piechart2'));
-
-            chart1.draw(data, options);
-            chart2.draw(data, options);
-        }
-    </script>
-
 </head>
 <body>
 
@@ -54,6 +33,7 @@
     </div>
 </div>
 <hr>
-
+<script type="text/javascript" src="/js/jsapi.js"></script>
+<script type="text/javascript" src="/js/chart.js"></script>
 </body>
 </html>
