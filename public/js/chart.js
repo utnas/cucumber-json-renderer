@@ -7,10 +7,10 @@
     function drawChart() {
         var chartContent = [
                 ['Scenario', 'Status'],
-                ['Passed', 11],
+                ['Skipped', 11],
                 ['Failed', 2],
                 ['Pending', 2],
-                ['Skipped', 7]
+                ['Passed', 127]
             ],
             data = google.visualization.arrayToDataTable(chartContent),
             options = {},
