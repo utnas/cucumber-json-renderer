@@ -1,7 +1,7 @@
 (function () {
     'user strict';
 
-    var Feature = require('./feature');
+    var Feature = require('./../model/feature');
 
     module.exports = function Parser() {
         var features = [];

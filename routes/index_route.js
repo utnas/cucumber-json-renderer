@@ -2,7 +2,7 @@
     'user strict';
 
     var express = require('express'),
-        parser = require('../model/json_loader').getParser(),
+        parser = require('../controller/json_loader').getParser(),
         router = express.Router();
 
     router.get('/', function (req, res) {

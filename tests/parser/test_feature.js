@@ -2,7 +2,7 @@
     'use strict';
 
     var assert = require('assert'),
-        Parser = require('../../model/parser'),
+        Parser = require('../../controller/parser'),
         data = require('./data');
 
     describe('Feature parser tests', function () {

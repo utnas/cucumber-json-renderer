@@ -15,17 +15,18 @@
         <small>HTML pretty custom renderer</small>
     </h1>
 </div>
+
 <div class="back-previous">
     <a href="/" class="btn btn-info btn-lg">Back to Chart view</a>
 </div>
 <br>
 
-<h1>Features</h1>
+<h2>(<%= features.length %>) Features</h2>
 <br>
 <% features.forEach(function(feature){ %>
 Name: <%= feature.getName() %>
 <br/>
-Number of scenarios: <%= feature.getScenarios().length %>
+(<%= feature.getScenarios().length %>) Scenarios
 <br/>
 Statistics:
 <ul>
