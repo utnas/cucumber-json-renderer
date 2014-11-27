@@ -1,6 +1,6 @@
 (function () {
     'use strict';
-    var Step = require('../../model/step'),
+    var Step = require('../../../model/step'),
         assert = require('assert'),
         data = require('./data');
 

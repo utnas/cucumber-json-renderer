@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    var data = require('../tests/parser/data'),
+    var data = require('../tests/model/parser/data'),
         Parser = require('./parser');
 
     function Loader() {

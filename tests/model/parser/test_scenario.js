@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    var Scenario = require('../../model/scenario'),
+    var Scenario = require('../../../model/scenario'),
         assert = require('assert'),
         data = require('./data');
 

@@ -10,6 +10,7 @@
         routes = require('./routes/index_route'),
         users = require('./routes/users_route'),
         features = require('./routes/features_route'),
+        api = require('./api/api.js'),
         app = express();
 
 // view engine setup
@@ -26,6 +27,7 @@
     app.use('/', routes);
     app.use('/users', users);
     app.use('/features', features);
+    app.use('/api', api);
 
 // catch 404 and forward to error handler
     app.use(function (req, res, next) {
