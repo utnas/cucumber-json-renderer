@@ -1,12 +1,12 @@
 (function () {
     'use strict';
 
-    google.load("visualization", "1", {packages: ["corechart"]});
+    google.load('visualization', '1', {packages: ['corechart']});
     google.setOnLoadCallback(drawChart);
 
     function drawChart() {
         var chartContent = [
-                ['Scenario', 'Status'],
+                ['Status', 'Number'],
                 ['Skipped', 11],
                 ['Failed', 2],
                 ['Pending', 2],
@@ -19,4 +19,4 @@
         chart1.draw(data, options);
         chart2.draw(data, options);
     }
-})();
+}());

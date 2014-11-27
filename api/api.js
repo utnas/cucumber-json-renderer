@@ -14,7 +14,7 @@
     });
 
     // Get a feature
-    //GET /api/features/idFeature
+    //GET /api/features/id
     api.get('/features/:id', function (req, res) {
         res.send(
             [{'idFeature': '/features/:id'}]
@@ -22,8 +22,8 @@
     });
 
     // Get scenario
-    // GET /api/features/featureId/idScenario
-    api.get('/features/:id/:idScenario', function (req, res) {
+    // GET /api/features/id/id
+    api.get('/features/:id/:id', function (req, res) {
         res.send(
             [{'scenario': 'id/idScenario'}]
         );
