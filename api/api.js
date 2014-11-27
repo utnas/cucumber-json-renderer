@@ -1,5 +1,5 @@
 var express = require('express'),
-    parser = require('../controller/json_loader').getParser();
+    parser = require('../controller/json_loader');
 
 var api = express();
 
@@ -7,26 +7,24 @@ var api = express();
 //GET /api/features
 api.get('/features', function (req, res) {
     res.send(
-        "features"
+        [{"features": 'features'}]
     );
 });
 
 // Get a feature
 //GET /api/features/idFeature
-api.get('/features/:idFeature', function (req, res) {
+api.get('/features/:id', function (req, res) {
     res.send(
-        {}
+        [{'idFeature': '/features/:id'}]
     );
 });
 
 // Get scenario
 // GET /api/features/featureId/idScenario
-api.get('/features/:idFeature/:idScenario', function (req, res) {
+api.get('/features/:id/:idScenario', function (req, res) {
     res.send(
-        {}
+        [{'scenario': 'id/idScenario'}]
     );
 });
 
-module.exports = function () {
-    return api;
-};
+module.exports = api;
