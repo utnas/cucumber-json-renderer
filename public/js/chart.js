@@ -1,8 +1,20 @@
 (function () {
     'use strict';
 
+    var xmlHttp = new XMLHttpRequest();
+
     google.load('visualization', '1', {packages: ['corechart']});
     google.setOnLoadCallback(drawChart);
+
+    xmlHttp.open("GET", 'http://localhost:3000/api/features', true);
+    xmlHttp.send();
+
+    xmlHttp.onreadystatechange = function () {
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+            var myArr = JSON.parse(xmlHttp.responseText);
+            console.log('Result: ' + myArr);
+        }
+    };
 
     function drawChart() {
         var chartContent = [
