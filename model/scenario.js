@@ -55,7 +55,7 @@
             for (; index < steps.length; index++) {
                 step = steps[index];
                 if (step && step.getStatus() !== 'passed') {
-                    return 'fail';
+                    return 'failed';
                 }
             }
             return 'passed'

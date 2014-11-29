@@ -26,7 +26,7 @@
 
     app.use('/', routes);
     app.use('/users', users);
-    app.use('/features', features);
+    app.use('/featuresSuccess', features);
     app.use('/api', api);
 
 // catch 404 and forward to error handler

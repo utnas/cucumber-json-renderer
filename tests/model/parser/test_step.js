@@ -12,7 +12,7 @@
             assert.deepEqual(step.getName(), 'I embed a screenshot');
             assert.deepEqual(step.getKeyword().trim(), 'Given');
             assert.deepEqual(step.getLine(), 4);
-            assert.deepEqual(step.getLocation(), 'features/step_definitions/steps.rb:29');
+            assert.deepEqual(step.getLocation(), 'featuresSuccess/step_definitions/steps.rb:29');
             assert.deepEqual(step.getStatus(), 'passed');
         })
     });

@@ -15,9 +15,9 @@
             assert.deepEqual(parser.getFeatures(), []);
         });
 
-        it('should contains 2 features', function () {
+        it('should contains 2 featuresSuccess', function () {
             var cucumberParser = new Parser();
-            cucumberParser.parse(data.features);
+            cucumberParser.parse(data.featuresSuccess);
             assert.deepEqual(cucumberParser.getFeatures().length, 2)
         });
 
@@ -26,7 +26,7 @@
                 feature = json.getFeatures()[0];
             assert.deepEqual(feature.getId(), 'a-screenshot-feature');
             assert.deepEqual(feature.getName(), 'A screenshot feature');
-            assert.deepEqual(feature.getURI(), 'features/embed.feature');
+            assert.deepEqual(feature.getURI(), 'featuresSuccess/embed.feature');
             assert.deepEqual(feature.getKeyword(), 'Feature');
             assert.deepEqual(feature.getDescription(), '');
             assert.deepEqual(feature.getLine(), 1);

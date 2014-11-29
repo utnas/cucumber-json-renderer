@@ -16,8 +16,19 @@
                 }
             }
             return result;
-        }
+        };
 
+        this.getFailures = function () {
+            var index = 0,
+                result = 0;
 
+            for (; index < features.length; index++) {
+                var feature = features[index];
+                if (feature instanceof Feature) {
+                    result = result + feature.getFailures().length;
+                }
+            }
+            return result;
+        };
     };
 }());

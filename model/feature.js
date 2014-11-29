@@ -17,6 +17,7 @@
                 }
                 return result;
             },
+
             convertScenarios = function (scenarios) {
                 var result = [], index = 0;
                 if (scenarios) {
@@ -69,7 +70,7 @@
         };
 
         this.getFailures = function () {
-            return filterScenarios();
+            return filterScenarios('failed');
         };
 
         this.getStatistics = function () {

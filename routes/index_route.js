@@ -6,7 +6,7 @@
         router = express.Router();
 
     router.get('/', function (req, res) {
-        res.render('index', {title: 'Cucumber.json renderer', features: parser.getFeatures()});
+        res.render('index', {title: 'Cucumber.json renderer', featuresSuccess: parser.getFeatures()});
     });
 
     module.exports = router;
