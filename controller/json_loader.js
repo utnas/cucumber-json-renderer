@@ -1,12 +1,12 @@
 (function () {
     'use strict';
 
-    var data = require('../tests/model/parser/data'),
+    var data = require('../tests/data/data'),
         Parser = require('./parser');
 
     function Loader() {
         var parser = new Parser();
-        parser.parse(data.features);
+        parser.parse(data.feature);
 
         this.getParser = function () {
             return parser;

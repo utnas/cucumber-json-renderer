@@ -3,7 +3,7 @@
 
     var assert = require('assert'),
         Parser = require('../../../controller/parser'),
-        data = require('./data');
+        data = require('./../../data/data');
 
     describe('Feature parser tests', function () {
 

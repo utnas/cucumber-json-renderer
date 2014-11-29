@@ -3,7 +3,7 @@
 
     var Scenario = require('../../../model/scenario'),
         assert = require('assert'),
-        data = require('./data');
+        data = require('./../../data/data');
 
     describe('Scenario parser tests', function () {
 

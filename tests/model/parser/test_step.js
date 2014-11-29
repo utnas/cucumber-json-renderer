@@ -2,7 +2,7 @@
     'use strict';
     var Step = require('../../../model/step'),
         assert = require('assert'),
-        data = require('./data');
+        data = require('./../../data/data');
 
     describe('Step parser tests', function () {
 
