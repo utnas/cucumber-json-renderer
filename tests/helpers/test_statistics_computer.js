@@ -7,40 +7,37 @@
 
     describe('Compute statistics from featuresSuccess tests', function () {
 
-        it('should return number of success from featuresSuccess list', function () {
-            var features = [],
+        it('should return two success from featuresSuccess list', function () {
+            var features = extractFeatures(data.featuresSuccess),
                 statsComputer;
-
-            features.push(new Feature(JSON.parse(data.featuresSuccess)[0]));
-            features.push(new Feature(JSON.parse(data.featuresSuccess)[1]));
-
             statsComputer = new StatisticsComputer(features);
 
             assert.deepEqual(statsComputer.getSuccess(), 2);
         });
 
         it('should return zero failures from featuresSuccess list', function () {
-            var features = [],
+            var features = extractFeatures(data.featuresSuccess),
                 statsComputer;
-
-            features.push(new Feature(JSON.parse(data.featuresSuccess)[0]));
-            features.push(new Feature(JSON.parse(data.featuresSuccess)[1]));
-
             statsComputer = new StatisticsComputer(features);
 
             assert.deepEqual(statsComputer.getFailures(), 0);
         });
 
-        it('should return 1 failure from featuresFailures list', function () {
-            var features = [],
-                statsComputer;
-
-            features.push(new Feature(JSON.parse(data.featuresFailures)[0]));
-            features.push(new Feature(JSON.parse(data.featuresFailures)[1]));
-
-            statsComputer = new StatisticsComputer(features);
-
+        it('should return one failure from featuresFailures list', function () {
+            var features = extractFeatures(data.featuresFailures),
+                statsComputer = new StatisticsComputer(features);
             assert.deepEqual(statsComputer.getFailures(), 1);
         });
     });
+
+    function extractFeatures(features) {
+        var index = 0,
+            result = [],
+            parsed = JSON.parse(features);
+        for (; index < parsed.length; index++) {
+            result.push(new Feature(parsed[index]));
+        }
+        return result;
+    }
+
 }());
