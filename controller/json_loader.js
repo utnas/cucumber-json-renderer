@@ -6,7 +6,7 @@
 
     function Loader() {
         var parser = new Parser();
-        parser.parse(data.feature);
+        parser.parse(data.featuresFailures);
 
         this.getParser = function () {
             return parser;

@@ -12,30 +12,30 @@
     api.get('/featuresSuccess', function (req, res) {
         parser = require('../controller/json_loader').getParser();
         res.send(
-            //statsComputed.getSuccess()
+            JSON.stringify(statsComputed.getSuccess())
         );
     });
 
     // Get statistics
-    //GET /api/featuresSuccess/stats
-    api.get('/featuresSuccess', function (req, res) {
+    //GET /api/features/stats
+    api.get('/featuresStats', function (req, res) {
 
         res.send(
-            //statsComputed.getAllStatistics()
+            statsComputed.getAllStatistics()
         );
     });
 
     // Get a feature
-    //GET /api/featuresSuccess/id
-    api.get('/featuresSuccess/:id', function (req, res) {
+    //GET /api/features/id
+    api.get('/features/:id', function (req, res) {
         res.send(
-            [{'idFeature': '/featuresSuccess/:id'}]
+            [{'idFeature': '/features/:id'}]
         );
     });
 
     // Get scenario
-    // GET /api/featuresSuccess/id/id
-    api.get('/featuresSuccess/:id/:id', function (req, res) {
+    // GET /api/features/id/id
+    api.get('/features/:id/:id', function (req, res) {
         res.send(
             [{'scenario': 'id/idScenario'}]
         );

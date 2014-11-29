@@ -4,6 +4,7 @@
     var Feature = require('../model/feature');
 
     module.exports = function StatisticsComputer(features) {
+        var that = this;
 
         this.getSuccess = function () {
             var index = 0,
@@ -29,6 +30,22 @@
                 }
             }
             return result;
+        };
+
+        that.getSkipped = function () {
+            return 0;
+        };
+
+        that.getPending = function () {
+            return 0;
+        };
+        this.getAllStatistics = function () {
+            return {
+                success: that.getSuccess(),
+                failures: that.getFailures(),
+                skipped: that.getSkipped(),
+                pending: that.getPending()
+            };
         };
     };
 }());

@@ -4,25 +4,22 @@
     var xmlHttp = new XMLHttpRequest(),
         response;
 
-    xmlHttp.open("GET", 'http://localhost:3000/api/featuresSuccess', true);
+    xmlHttp.open("GET", 'http://localhost:3000/api/featuresStats', true);
     xmlHttp.send();
 
     xmlHttp.onreadystatechange = function () {
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
             response = JSON.parse(xmlHttp.response);
-            var scenarios = response[0];
-            console.log(scenarios);
-            console.log(xmlHttp);
         }
     };
 
     var drawChart = function drawChart() {
         var chartContent = [
                 ['Status', 'Number'],
-                ['Skipped', 12],
-                ['Failed', 22],
-                ['Pending', 8],
-                ['Passed', 127]
+                ['Skipped', response.skipped],
+                ['Failed', response.failures],
+                ['Pending', response.pending],
+                ['Passed', response.success]
             ],
             data = google.visualization.arrayToDataTable(chartContent),
             options = {},
