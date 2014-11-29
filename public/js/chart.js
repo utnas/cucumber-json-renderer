@@ -4,7 +4,7 @@
     var xmlHttp = new XMLHttpRequest(),
         response;
 
-    xmlHttp.open("GET", 'http://localhost:3000/api/featuresStats', true);
+    xmlHttp.open("GET", 'http://localhost:3000/api/features/stats', true);
     xmlHttp.send();
 
     xmlHttp.onreadystatechange = function () {

@@ -18,7 +18,7 @@
 
     // Get statistics
     //GET /api/features/stats
-    api.get('/featuresStats', function (req, res) {
+    api.get('/features/stats', function (req, res) {
 
         res.send(
             statsComputed.getAllStatistics()
