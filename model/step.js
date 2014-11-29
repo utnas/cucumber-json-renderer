@@ -26,5 +26,9 @@
         this.getLine = function () {
             return line;
         };
+
+        this.hasStatus = function (expectedStatus) {
+            return status === expectedStatus;
+        };
     };
 }());

@@ -54,8 +54,12 @@
             var step, index = 0;
             for (; index < steps.length; index++) {
                 step = steps[index];
-                if (step && step.getStatus() !== 'passed') {
+                if (step.hasStatus('failed')) {
                     return 'failed';
+                } else {
+                    if (step.hasStatus('skipped')) {
+                        return 'skipped';
+                    }
                 }
             }
             return 'passed'
