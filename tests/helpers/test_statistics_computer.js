@@ -5,9 +5,9 @@
         data = require('../data/data'),
         StatisticsComputer = require('../../helpers/statistics_computer');
 
-    describe('Step parser tests', function () {
+    describe('Compute statistics from features tests', function () {
 
-        it('should return a valid step from json', function () {
+        it('should return number of success from features list', function () {
             var features = [],
                 statsComputer;
 
