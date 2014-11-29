@@ -4,22 +4,24 @@
     var express = require('express'),
         api = express(),
         parser = require('../controller/json_loader').getParser(),
-        statComputer = require('../helpers/statistics_computer');
+        StatisticsComputer = require('../helpers/statistics_computer'),
+        statsComputed = new StatisticsComputer(parser.getFeatures());
 
     // Get featuresSuccess
     //GET /api/featuresSuccess
     api.get('/featuresSuccess', function (req, res) {
         parser = require('../controller/json_loader').getParser();
         res.send(
-            parser.getFeatures()[0].getStatistics()
+            //statsComputed.getSuccess()
         );
     });
 
     // Get statistics
     //GET /api/featuresSuccess/stats
     api.get('/featuresSuccess', function (req, res) {
+
         res.send(
-            helper.computeStats(parser.getFeatures())
+            //statsComputed.getAllStatistics()
         );
     });
 

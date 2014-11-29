@@ -26,7 +26,7 @@
                 feature = json.getFeatures()[0];
             assert.deepEqual(feature.getId(), 'a-screenshot-feature');
             assert.deepEqual(feature.getName(), 'A screenshot feature');
-            assert.deepEqual(feature.getURI(), 'featuresSuccess/embed.feature');
+            assert.deepEqual(feature.getURI(), 'features/embed.feature');
             assert.deepEqual(feature.getKeyword(), 'Feature');
             assert.deepEqual(feature.getDescription(), '');
             assert.deepEqual(feature.getLine(), 1);
