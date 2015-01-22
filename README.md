@@ -7,6 +7,6 @@
 
 ## Execute
 1. Run Server "node app"
-2. Got to [http://localhost:3000]
+2. Go to [http://localhost:3000]
 
 License: MIT
